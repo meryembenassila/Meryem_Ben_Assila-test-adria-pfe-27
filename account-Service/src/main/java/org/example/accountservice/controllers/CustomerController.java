@@ -1,11 +1,13 @@
 package org.example.accountservice.controllers;
 
+import lombok.AllArgsConstructor;
 import org.example.accountservice.entities.Customer;
 import org.example.accountservice.services.CustomerService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@RestController
+@AllArgsConstructor
 public class CustomerController {
     CustomerService customerService;
 

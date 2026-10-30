@@ -1,11 +1,13 @@
 package org.example.accountservice.controllers;
 
+import lombok.AllArgsConstructor;
 import org.example.accountservice.entities.Bankaccount;
 import org.example.accountservice.services.BankaccountService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@RestController
+@AllArgsConstructor
 public class BanckAccountController {
     BankaccountService bankaccountService;
 
@@ -20,7 +22,7 @@ public class BanckAccountController {
     }
 
     @GetMapping("api/bankaccounts/{id}")
-    Bankaccount getBankaccount(@PathVariable String. id ){
+    Bankaccount getBankaccount(@PathVariable String id ){
         return  bankaccountService.getBankaccount(id);
     }
 
